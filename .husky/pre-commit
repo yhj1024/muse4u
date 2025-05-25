@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 커밋 전 검사를 시작합니다..."
+echo ""
+
+pnpm lint-staged
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ 커밋 전 검사가 실패했습니다!"
+  echo "📝 위의 문제를 해결한 후 다시 커밋해주세요."
+  exit 1
+fi
+
+echo ""
+echo "✅ 모든 검사를 통과했습니다!"

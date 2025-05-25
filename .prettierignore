@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# testing
+coverage/
+
+# next.js
+.next/
+out/
+dist/
+build/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+pnpm-debug.log*
+pnpm-lock.yaml
+
+# local env files
+.env*.local
+
+# turborepo
+.turbo
+
+# generated
+*.generated.*

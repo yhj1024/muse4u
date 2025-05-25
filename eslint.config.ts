@@ -1,2 +1,8 @@
 // Root ESLint config for the monorepo
-export default [];
+const config = [
+  {
+    ignores: ['**/.next/**', '**/dist/**', '**/node_modules/**'],
+  },
+];
+
+export default config;
