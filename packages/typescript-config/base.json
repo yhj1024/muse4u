@@ -8,12 +8,13 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "allowImportingTsExtensions": false,
+    "resolvePackageJsonExports": true
   },
   "exclude": ["node_modules"]
 }

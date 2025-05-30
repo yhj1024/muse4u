@@ -2,7 +2,7 @@ import type { Linter } from 'eslint';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 
-export const baseConfig: Linter.FlatConfig[] = [
+export const baseConfig: Linter.Config[] = [
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     languageOptions: {
@@ -16,12 +16,15 @@ export const baseConfig: Linter.FlatConfig[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': tsPlugin as any,
+      '@typescript-eslint': tsPlugin,
     },
     rules: {
-      'no-console': 'warn',
+      'no-console': 'error',
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_' },
+      ],
       'no-debugger': 'error',
       'prefer-const': 'error',
       'no-var': 'error',

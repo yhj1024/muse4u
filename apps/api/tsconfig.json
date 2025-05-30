@@ -2,11 +2,10 @@
   "extends": "@repo/typescript-config/node.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist",
     "paths": {
-      "@repo/eslint-config/*": ["../../packages/eslint-config/src/*"],
-      "@repo/shared": ["../../packages/shared/src/index.ts"]
+      "@repo/eslint-config/*": ["../../packages/eslint-config/src/*"]
     },
+    "outDir": "./dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
@@ -15,6 +14,6 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "**/*.ts"],
   "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
 }

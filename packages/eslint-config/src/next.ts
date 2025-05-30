@@ -1,12 +1,15 @@
 import type { Linter } from 'eslint';
+import nextPlugin from '@next/eslint-plugin-next';
 
-export const nextConfig: Linter.FlatConfig[] = [
+export const nextConfig: Linter.Config[] = [
   {
     files: ['**/*.ts', '**/*.tsx'],
+    plugins: {
+      '@next/next': nextPlugin,
+    },
     rules: {
-      '@next/next/no-html-link-for-pages': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
+      '@next/next/no-html-link-for-pages': 'error',
+      // React rules removed - need react plugin for these
     },
   },
 ];
