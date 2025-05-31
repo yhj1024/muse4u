@@ -1,8 +1,7 @@
-import type { Linter } from 'eslint';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 
-export const baseConfig: Linter.Config[] = [
+export const baseConfig = [
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     languageOptions: {
@@ -20,7 +19,6 @@ export const baseConfig: Linter.Config[] = [
     },
     rules: {
       'no-console': 'error',
-      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_' },

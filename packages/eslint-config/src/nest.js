@@ -1,6 +1,18 @@
-import type { Linter } from 'eslint';
+import baseConfig from './base.js';
 
-export const nestConfig: Linter.Config[] = [
+export const nestConfig = [
+  {
+    ignores: [
+      '**/dist/**',
+      '**/build/**',
+      '**/node_modules/**',
+      '**/.turbo/**',
+      '**/coverage/**',
+      '**/*.spec.ts',
+      '**/test/**',
+    ],
+  },
+  ...baseConfig,
   {
     files: ['**/*.ts'],
     rules: {
@@ -8,17 +20,10 @@ export const nestConfig: Linter.Config[] = [
       '@typescript-eslint/explicit-function-return-type': 'warn', // 타입 추론 가능한 경우 허용
       '@typescript-eslint/explicit-module-boundary-types': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_' },
-      ],
       '@typescript-eslint/no-empty-interface': 'error',
       '@typescript-eslint/no-inferrable-types': 'error',
       '@typescript-eslint/no-namespace': 'error',
       '@typescript-eslint/no-non-null-assertion': 'warn',
-      // Type-aware rules disabled due to complexity with monorepo setup
-      // '@typescript-eslint/prefer-optional-chain': 'error',
-      // '@typescript-eslint/prefer-nullish-coalescing': 'error',
       'no-restricted-imports': [
         'error',
         {

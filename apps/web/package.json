@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --config eslint.config.ts",
+    "lint": "eslint . --config eslint.config.js",
     "svgr": "node scripts/svgr.mjs",
     "svgr:watch": "node scripts/svgr.mjs && chokidar 'public/svgs/**/*.svg' -c 'pnpm svgr'",
     "test": "playwright test",
@@ -18,8 +18,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.89.0",
-    "swiper": "^11.2.6",
-    "@repo/shared": "workspace:*"
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

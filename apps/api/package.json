@@ -6,13 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
     "dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "lint": "eslint . --config eslint.config.ts",
+    "build": "nest build",
+    "start": "node dist/main",
+    "lint": "eslint . --config eslint.config.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -24,8 +21,7 @@
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1",
-    "@repo/shared": "workspace:*"
+    "rxjs": "^7.8.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

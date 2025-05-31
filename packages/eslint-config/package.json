@@ -3,15 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "main": "./src/index.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./base": "./src/base.ts",
-    "./next": "./src/next.ts",
-    "./nest": "./src/nest.ts"
+    "./base": "./src/base.js",
+    "./next": "./src/next.js",
+    "./nest": "./src/nest.js"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint ."
   },
   "dependencies": {
     "eslint": "^9.0.0",

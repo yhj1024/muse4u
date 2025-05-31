@@ -1,7 +1,19 @@
-import type { Linter } from 'eslint';
 import nextPlugin from '@next/eslint-plugin-next';
+import baseConfig from './base.js';
 
-export const nextConfig: Linter.Config[] = [
+export const nextConfig = [
+  {
+    ignores: [
+      '**/.next/**',
+      '**/out/**',
+      '**/build/**',
+      '**/dist/**',
+      '**/node_modules/**',
+      '**/.turbo/**',
+      '**/coverage/**',
+    ],
+  },
+  ...baseConfig,
   {
     files: ['**/*.ts', '**/*.tsx'],
     plugins: {
