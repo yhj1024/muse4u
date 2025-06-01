@@ -11,10 +11,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// 트랙 데이터 타입 정의
+interface AlgorithmItem {
+  id: number;
+  title: string;
+  genre: string;
+  coverImage: string;
+  authorImage: string;
+  authorName: string;
+}
 
 // 장르별 음악 데이터
-const items = [
+const items: AlgorithmItem[] = [
   {
     id: 1,
     title: '이름입니다',
@@ -119,7 +126,7 @@ const items = [
 
 export const GenreBrowser = () => {
   return (
-    <SectionContainer>
+    <SectionContainer paddingType={'leftOnly'}>
       <HomeTitle title={'장르별'} />
       <div className="relative">
         <div
@@ -186,7 +193,7 @@ export const GenreBrowser = () => {
           loop={false}
           className="w-full"
         >
-          {items.map((item) => (
+          {items.map((item: AlgorithmItem) => (
             <SwiperSlide key={item.id} className={`!w-[270px] mr-[24px]`}>
               <AlgorithmItem item={item} />
             </SwiperSlide>
@@ -197,7 +204,7 @@ export const GenreBrowser = () => {
   );
 };
 
-const AlgorithmItem = ({ item }: AlgorithmItemProps) => {
+const AlgorithmItem = ({ item }: { item: AlgorithmItem }) => {
   return (
     <div className="flex flex-col cursor-pointer">
       <div className="overflow-hidden rounded-2xl relative aspect-[3/2] w-full group">

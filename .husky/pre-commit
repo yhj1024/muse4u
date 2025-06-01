@@ -3,7 +3,19 @@
 echo "🚀 커밋 전 검사를 시작합니다..."
 echo ""
 
+# TypeScript 타입 체크
+echo "🔎 TypeScript 타입 검사 중..."
+pnpm typecheck
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ TypeScript 타입 검사가 실패했습니다!"
+  echo "📝 위의 타입 오류를 해결한 후 다시 커밋해주세요."
+  exit 1
+fi
+
 # ESLint 검사
+echo ""
 echo "🔍 ESLint 검사 중..."
 pnpm lint
 
