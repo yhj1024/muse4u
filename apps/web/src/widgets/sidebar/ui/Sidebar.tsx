@@ -2,7 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Search, Notice, Idea, Subscribe, Muse4uline_ver } from '@/shared/ui/icons';
+import {
+  Home,
+  Search,
+  Notice,
+  Idea,
+  Subscribe,
+  Muse4uline_ver,
+} from '@/shared/ui/icons';
 
 type SVGComponentProps = React.SVGProps<SVGSVGElement>;
 type SVGComponent = React.ComponentType<SVGComponentProps>;
@@ -26,10 +33,12 @@ const Container = ({ children }: { children: React.ReactNode }) => {
 };
 
 const Avatar = () => {
-  return <div className={'font-medium text-center rounded-2xl bg-gray-500 w-20'}>
-    로그인
-  </div>
-}
+  return (
+    <div className={'font-medium text-center rounded-2xl bg-gray-500 w-20'}>
+      로그인
+    </div>
+  );
+};
 
 const Title = () => {
   return (
@@ -43,7 +52,15 @@ const Title = () => {
   );
 };
 
-const Menu = ({ href, title, Icon }: { href: string; title: string; Icon: SVGComponent }) => {
+const Menu = ({
+  href,
+  title,
+  Icon,
+}: {
+  href: string;
+  title: string;
+  Icon: SVGComponent;
+}) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -52,8 +69,12 @@ const Menu = ({ href, title, Icon }: { href: string; title: string; Icon: SVGCom
       href={href}
       className={`flex items-center px-5 py-2 hover:bg-white/10 relative ${isActive ? 'bg-white/10' : ''}`}
     >
-      {isActive && <div className="absolute left-0 top-0 w-1 h-full bg-white-primary"></div>}
-      <span className={`mr-3 ${isActive ? '' : 'text-[#726E6C]'} flex items-center gap-x-2.5`}>
+      {isActive && (
+        <div className="absolute left-0 top-0 w-1 h-full bg-white-primary"></div>
+      )}
+      <span
+        className={`mr-3 ${isActive ? '' : 'text-[#726E6C]'} flex items-center gap-x-2.5`}
+      >
         <Icon width={16} height={16} fill={isActive ? '#ffffff' : '#726E6C'} />
         {title}
       </span>
@@ -92,7 +113,12 @@ const Menus = () => {
   return (
     <nav className="flex-1 py-4">
       {menuItems.map((item) => (
-        <Menu key={item.href} href={item.href} title={item.title} Icon={item.Icon} />
+        <Menu
+          key={item.href}
+          href={item.href}
+          title={item.title}
+          Icon={item.Icon}
+        />
       ))}
     </nav>
   );

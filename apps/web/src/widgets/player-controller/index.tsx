@@ -72,13 +72,13 @@ export const PlayerController = () => {
       className="w-full text-white border-t border-zinc-800 backdrop-blur-md py-2 px-4"
       style={{ backgroundColor: 'rgb(37, 32, 32)' }}
     >
-      <audio
-        ref={audioRef}
-        src="/sample-audio.mp3"
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        onEnded={() => setIsPlaying(false)}
-      />
+      {/*<audio*/}
+      {/*  ref={audioRef}*/}
+      {/*  src="/sample-audio.mp3"*/}
+      {/*  onPlay={() => setIsPlaying(true)}*/}
+      {/*  onPause={() => setIsPlaying(false)}*/}
+      {/*  onEnded={() => setIsPlaying(false)}*/}
+      {/*/>*/}
 
       <div className="flex flex-col">
         <div className="flex items-center justify-between w-full">
@@ -192,7 +192,9 @@ export const PlayerController = () => {
           >
             <div
               className="absolute top-0 left-0 h-full bg-white rounded-full"
-              style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
+              style={{
+                width: `${duration ? (currentTime / duration) * 100 : 0}%`,
+              }}
             ></div>
           </div>
         </div>

@@ -18,7 +18,13 @@ interface TrackCardProps {
   backgroundColor?: string;
 }
 
-export const TrackCard = ({ title, description, creator, stats, thumbnail }: TrackCardProps) => {
+export const TrackCard = ({
+  title,
+  description,
+  creator,
+  stats,
+  thumbnail,
+}: TrackCardProps) => {
   const handlePlay = () => {
     // TODO: Implement play functionality
   };
@@ -33,7 +39,11 @@ export const TrackCard = ({ title, description, creator, stats, thumbnail }: Tra
         </div>
         <div className="flex text-sm items-center justify-between text-sm">
           <Card.Creator name={creator} icon={true} />
-          <Card.Stats plays={stats.plays} likes={stats.likes} reposts={stats.reposts} />
+          <Card.Stats
+            plays={stats.plays}
+            likes={stats.likes}
+            reposts={stats.reposts}
+          />
         </div>
       </Card.Content>
     </Card>

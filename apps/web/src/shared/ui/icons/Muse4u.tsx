@@ -48,7 +48,13 @@ const Muse4u = (props: SVGProps<SVGSVGElement>) => (
       />
     </mask>
     <g mask="url(#mask0_15_105)">
-      <rect x={-204} y={-24} width={681} height={386} fill="url(#pattern0_15_105)" />
+      <rect
+        x={-204}
+        y={-24}
+        width={681}
+        height={386}
+        fill="url(#pattern0_15_105)"
+      />
       <rect
         x={132}
         y={120.864}
@@ -59,14 +65,27 @@ const Muse4u = (props: SVGProps<SVGSVGElement>) => (
       />
     </g>
     <defs>
-      <pattern id="pattern0_15_105" patternContentUnits="objectBoundingBox" width={1} height={1}>
+      <pattern
+        id="pattern0_15_105"
+        patternContentUnits="objectBoundingBox"
+        width={1}
+        height={1}
+      >
         <use
           xlinkHref="#image0_15_105"
           transform="matrix(0.000520012 0 0 0.000917431 -0.000251923 0)"
         />
       </pattern>
-      <pattern id="pattern1_15_105" patternContentUnits="objectBoundingBox" width={1} height={1}>
-        <use xlinkHref="#image0_15_105" transform="scale(0.000519751 0.000917431)" />
+      <pattern
+        id="pattern1_15_105"
+        patternContentUnits="objectBoundingBox"
+        width={1}
+        height={1}
+      >
+        <use
+          xlinkHref="#image0_15_105"
+          transform="scale(0.000519751 0.000917431)"
+        />
       </pattern>
       <image
         id="image0_15_105"

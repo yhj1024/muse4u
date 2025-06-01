@@ -10,7 +10,12 @@ interface CreatorCardProps {
   thumbnail: string;
 }
 
-export const CreatorCard = ({ name, followers, handle, thumbnail }: CreatorCardProps) => {
+export const CreatorCard = ({
+  name,
+  followers,
+  handle,
+  thumbnail,
+}: CreatorCardProps) => {
   const handleFollow = () => {
     // TODO: Implement follow functionality
   };

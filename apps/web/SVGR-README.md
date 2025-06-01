@@ -40,6 +40,7 @@ pnpm svgr
 ```
 
 This will:
+
 1. Convert all SVG files in `public/svgs` to React components
 2. Place the components in `src/components/icons`
 3. Create an index.tsx file with exports for all components
@@ -74,7 +75,7 @@ pnpm svgr:watch
 The generated SVG components accept all standard SVG props, plus React-specific props:
 
 ```tsx
-<HomeIcon 
+<HomeIcon
   className="w-6 h-6" // You can use Tailwind classes
   onClick={() => console.log('Clicked!')} // React event handlers
   style={{ color: 'blue' }} // Inline styles

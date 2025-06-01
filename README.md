@@ -97,6 +97,7 @@ import { Button, Card } from '@repo/ui';
 ### Project Structure Standards
 
 Each package follows a consistent structure:
+
 ```
 package-name/
 ├── src/           # Source code
@@ -123,19 +124,19 @@ All packages use shared ESLint configurations:
 
 ```javascript
 module.exports = {
-  extends: ["@repo/eslint-config/next.js"]
+  extends: ['@repo/eslint-config/next.js'],
 };
 ```
 
 ## 📜 Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start all apps in development mode |
-| `pnpm build` | Build all apps |
-| `pnpm lint` | Lint all packages |
-| `pnpm test` | Run tests |
-| `pnpm format` | Format code with Prettier |
+| Command       | Description                        |
+| ------------- | ---------------------------------- |
+| `pnpm dev`    | Start all apps in development mode |
+| `pnpm build`  | Build all apps                     |
+| `pnpm lint`   | Lint all packages                  |
+| `pnpm test`   | Run tests                          |
+| `pnpm format` | Format code with Prettier          |
 
 ## 🌐 Ports
 

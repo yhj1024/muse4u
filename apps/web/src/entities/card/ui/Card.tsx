@@ -11,7 +11,11 @@ interface CardProps {
 }
 
 export const Card = ({ children, className = '' }: CardProps) => {
-  return <div className={`flex items-start gap-3 group ${className}`}>{children}</div>;
+  return (
+    <div className={`flex items-start gap-3 group ${className}`}>
+      {children}
+    </div>
+  );
 };
 
 // 썸네일 컴포넌트
@@ -22,10 +26,20 @@ interface ThumbnailProps {
   overlayContent?: ReactNode;
 }
 
-const Thumbnail = ({ src, alt = 'thumbnail', onClick, overlayContent }: ThumbnailProps) => {
+const Thumbnail = ({
+  src,
+  alt = 'thumbnail',
+  onClick,
+  overlayContent,
+}: ThumbnailProps) => {
   return (
     <div className="w-12 h-16 bg-gray-700 rounded overflow-hidden relative flex-shrink-0 cursor-pointer">
-      <Image src={src || '/images/default.jpg'} fill alt={alt} className="object-cover" />
+      <Image
+        src={src || '/images/default.jpg'}
+        fill
+        alt={alt}
+        className="object-cover"
+      />
       {onClick && (
         <div
           className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
@@ -44,7 +58,9 @@ interface ContentProps {
 }
 
 const Content = ({ children }: ContentProps) => {
-  return <div className="h-[72px] flex-1 min-w-0 flex flex-col">{children}</div>;
+  return (
+    <div className="h-[72px] flex-1 min-w-0 flex flex-col">{children}</div>
+  );
 };
 
 // 제목 컴포넌트
@@ -91,7 +107,9 @@ interface CreatorProps {
 const Creator = ({ name, icon = true }: CreatorProps) => {
   return (
     <div className="flex items-center text-sm text-gray-500">
-      {icon && <span className="w-4 h-4 rounded-full bg-purple-500 flex-shrink-0 mr-1"></span>}
+      {icon && (
+        <span className="w-4 h-4 rounded-full bg-purple-500 flex-shrink-0 mr-1"></span>
+      )}
       <span className="truncate max-w-[120px]">{name}</span>
     </div>
   );
@@ -123,7 +141,12 @@ interface ButtonProps {
   size?: 'small' | 'normal';
 }
 
-const Button = ({ children, onClick, className = '', size = 'normal' }: ButtonProps) => {
+const Button = ({
+  children,
+  onClick,
+  className = '',
+  size = 'normal',
+}: ButtonProps) => {
   const sizeClasses = {
     small: 'px-2 py-0.5 text-xs',
     normal: 'px-3 py-1 text-sm',

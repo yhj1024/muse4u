@@ -132,10 +132,11 @@ const Category = ({ title, children }: CategoryProps) => {
 
 export const Recommend = () => {
   const [newTracks, setNewTracks] = useState<TrackData[]>(newTracksData);
-  const [popularCreators, setPopularCreators] = useState<CreatorData[]>(popularCreatorsData);
-  const [recentlyListenedTracks, setRecentlyListenedTracks] = useState<TrackData[]>(
-    recentlyListenedTracksData
-  );
+  const [popularCreators, setPopularCreators] =
+    useState<CreatorData[]>(popularCreatorsData);
+  const [recentlyListenedTracks, setRecentlyListenedTracks] = useState<
+    TrackData[]
+  >(recentlyListenedTracksData);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -152,21 +153,21 @@ export const Recommend = () => {
       newTracksData.map((track) => ({
         ...track,
         thumbnail: getRandomImageUrl(),
-      }))
+      })),
     );
 
     setPopularCreators(
       popularCreatorsData.map((creator) => ({
         ...creator,
         thumbnail: getRandomImageUrl(),
-      }))
+      })),
     );
 
     setRecentlyListenedTracks(
       recentlyListenedTracksData.map((track) => ({
         ...track,
         thumbnail: getRandomImageUrl(),
-      }))
+      })),
     );
   }, []);
 

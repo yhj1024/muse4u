@@ -11,5 +11,7 @@ export const SectionContainer = ({
   paddingType?: 'default' | 'leftOnly';
 }) => {
   const padding = paddingConfig[paddingType];
-  return <section className={`${padding} max-w-[1920px] my-5`}>{children}</section>;
+  return (
+    <section className={`${padding} max-w-[1920px] my-5`}>{children}</section>
+  );
 };

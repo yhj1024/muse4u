@@ -1,14 +1,27 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
 echo "🚀 커밋 전 검사를 시작합니다..."
 echo ""
 
-pnpm lint-staged
+# ESLint 검사
+echo "🔍 ESLint 검사 중..."
+pnpm lint
 
 if [ $? -ne 0 ]; then
   echo ""
-  echo "❌ 커밋 전 검사가 실패했습니다!"
+  echo "❌ ESLint 검사가 실패했습니다!"
+  echo "📝 위의 문제를 해결한 후 다시 커밋해주세요."
+  exit 1
+fi
+
+# Prettier 검사
+echo ""
+echo "✨ Prettier 포맷팅 검사 중..."
+pnpm prettier --check "**/*.{ts,tsx,md,json,css,scss,yaml,yml}"
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ Prettier 포맷팅 검사가 실패했습니다!"
   echo "📝 위의 문제를 해결한 후 다시 커밋해주세요."
   exit 1
 fi

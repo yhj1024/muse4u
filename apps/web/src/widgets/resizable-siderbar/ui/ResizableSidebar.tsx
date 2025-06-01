@@ -35,7 +35,9 @@ export const ResizableSidebar: React.FC<ResizableSidebarProps> = ({
       if (!sidebarRef.current) return;
 
       // 사이드바 위치에 상대적인 마우스 위치 계산
-      const newWidth = mouseMoveEvent.clientX - sidebarRef.current.getBoundingClientRect().left;
+      const newWidth =
+        mouseMoveEvent.clientX -
+        sidebarRef.current.getBoundingClientRect().left;
 
       // 최소/최대 너비 범위 내에서 조정
       setWidth(Math.max(minWidth, Math.min(maxWidth, newWidth)));
@@ -64,7 +66,11 @@ export const ResizableSidebar: React.FC<ResizableSidebarProps> = ({
   }, [isResizing, minWidth, maxWidth]);
 
   return (
-    <div ref={sidebarRef} className="relative h-screen" style={{ width: `${width}px` }}>
+    <div
+      ref={sidebarRef}
+      className="relative h-screen"
+      style={{ width: `${width}px` }}
+    >
       {children}
       <div
         className={`absolute top-0 right-0 w-1 h-full bg-white/10 hover:bg-white/20 cursor-col-resize transition-colors ${

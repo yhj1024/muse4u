@@ -121,7 +121,9 @@ const Genre = ({ title }: { title: string }) => {
       <HomeTitle title={title} />
       <div className="relative">
         <div
-          className={'absolute right-5 top-[-60px] z-10 flex space-x-2 hidden bg-gray'}
+          className={
+            'absolute right-5 top-[-60px] z-10 flex space-x-2 hidden bg-gray'
+          }
           id={`swiper-pagination-${title}`}
         >
           <button
@@ -171,7 +173,9 @@ const Genre = ({ title }: { title: string }) => {
           onInit={(swiper) => {
             // 초기화 후 네비게이션 활성화 및 표시
             setTimeout(() => {
-              const navContainer = document.querySelector(`#swiper-pagination-${title}`);
+              const navContainer = document.querySelector(
+                `#swiper-pagination-${title}`,
+              );
               if (navContainer) navContainer.classList.remove('hidden');
               swiper.navigation?.init();
               swiper.navigation?.update();
@@ -195,7 +199,12 @@ const Genre = ({ title }: { title: string }) => {
   );
 };
 export const GenreDetail = () => {
-  const items = [{ title: '힙합' }, { title: '알앤비' }, { title: '팝' }, { title: '발라드' }];
+  const items = [
+    { title: '힙합' },
+    { title: '알앤비' },
+    { title: '팝' },
+    { title: '발라드' },
+  ];
   return items.map((item) => <Genre key={item.title} title={item.title} />);
 };
 
@@ -230,7 +239,9 @@ const AlgorithmItem = ({ item }: AlgorithmItemProps) => {
           width={25}
           height={25}
         />
-        <span className={'text-[#726E6C] text-sm text-gray-400'}>{item.authorName}</span>
+        <span className={'text-[#726E6C] text-sm text-gray-400'}>
+          {item.authorName}
+        </span>
       </div>
     </div>
   );

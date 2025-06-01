@@ -121,7 +121,9 @@ export const Algorithm = () => {
       <HomeTitle title={'추천곡'} />
       <div className="relative">
         <div
-          className={'absolute right-5 top-[-60px] z-10 flex space-x-2 hidden bg-gray'}
+          className={
+            'absolute right-5 top-[-60px] z-10 flex space-x-2 hidden bg-gray'
+          }
           id={'swiper-pagination'}
         >
           <button className="custom-prev-btn w-8 h-8 flex items-center justify-center bg-black/30 hover:bg-black/50 rounded-full transition-all">
@@ -222,7 +224,9 @@ const AlgorithmItem = ({ item }: AlgorithmItemProps) => {
           width={25}
           height={25}
         />
-        <span className={'text-[#726E6C] text-sm text-gray-400'}>{item.authorName}</span>
+        <span className={'text-[#726E6C] text-sm text-gray-400'}>
+          {item.authorName}
+        </span>
       </div>
     </div>
   );

@@ -123,7 +123,9 @@ export const GenreBrowser = () => {
       <HomeTitle title={'장르별'} />
       <div className="relative">
         <div
-          className={'absolute right-5 top-[-60px] z-10 flex space-x-2 hidden bg-gray'}
+          className={
+            'absolute right-5 top-[-60px] z-10 flex space-x-2 hidden bg-gray'
+          }
           id={'swiper-pagination-2'}
         >
           <button className="custom-prev-btn-2 w-8 h-8 flex items-center justify-center bg-black/30 hover:bg-black/50 rounded-full transition-all">
@@ -169,7 +171,9 @@ export const GenreBrowser = () => {
           onInit={(swiper) => {
             // 초기화 후 네비게이션 활성화 및 표시
             setTimeout(() => {
-              const navContainer = document.querySelector('#swiper-pagination-2');
+              const navContainer = document.querySelector(
+                '#swiper-pagination-2',
+              );
               if (navContainer) navContainer.classList.remove('hidden');
               swiper.navigation?.init();
               swiper.navigation?.update();
@@ -216,7 +220,12 @@ const AlgorithmItem = ({ item }: AlgorithmItemProps) => {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </div>
       </div>

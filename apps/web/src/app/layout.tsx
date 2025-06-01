@@ -18,9 +18,15 @@ export default function RootLayout({
 
   return (
     <html lang="ko">
-      <body className={`${pretendard.className} text-white-primary bg-background-primary`}>
+      <body
+        className={`${pretendard.className} text-white-primary bg-background-primary`}
+      >
         <div className="flex flex-col h-screen">
-          <div className={'lg:hidden px-4 lg:px-6 py-2.5 flex items-center justify-between'}>
+          <div
+            className={
+              'lg:hidden px-4 lg:px-6 py-2.5 flex items-center justify-between'
+            }
+          >
             <div className={'text-4xl font-bold'}>
               <img src={'/svgs/muse4u.svg'} alt={'test'} width={160} />
               {/*<img src={'/svgs/muse4uline_ver.svg'} alt={'test'} width={160} />*/}

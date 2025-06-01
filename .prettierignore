@@ -1,30 +1,33 @@
-# dependencies
-node_modules/
-.pnpm-store/
+# IDE/Editor
+.claude/
+.idea/
 
-# testing
-coverage/
-
-# next.js
-.next/
-out/
+# Build outputs
 dist/
 build/
+.next/
 
-# misc
-.DS_Store
-*.pem
+# Test results
+playwright-report/
+test-results/
+# Dependencies
+node_modules/
 
-# debug
-npm-debug.log*
-pnpm-debug.log*
+# Lock files
 pnpm-lock.yaml
+package-lock.json
+# Local config files
+*.local.ts
+*.local.js
 
-# local env files
-.env*.local
+# Generated files
+# Logs
+*.log
 
-# turborepo
-.turbo
+# OS files
+.DS_Store
+Thumbs.db
 
-# generated
-*.generated.*
+# Temporary files
+*.tmp
+*.temp
