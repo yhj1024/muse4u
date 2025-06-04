@@ -21,6 +21,7 @@ package-lock.json
 *.local.js
 
 # Generated files
+generated/
 # Logs
 *.log
 

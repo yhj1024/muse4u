@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   Home,
@@ -33,9 +34,24 @@ const Container = ({ children }: { children: React.ReactNode }) => {
 };
 
 const Avatar = () => {
+  // return (
+  //   <div className={'font-medium text-center rounded-2xl bg-gray-500 w-20'}>
+  //     로그인
+  //   </div>
+  // );
   return (
-    <div className={'font-medium text-center rounded-2xl bg-gray-500 w-20'}>
-      로그인
+    <div className={'flex p-3 gap-3 text-sm items-center'}>
+      <div className={'rounded-2xl overflow-hidden'}>
+        <Image
+          alt={'profile'}
+          width={40}
+          height={40}
+          src={
+            'https://static-cos.mureka.ai/cos-prod/files/16570516504577/20250319/ad191a58e9ef4c1cb5adbdf4f98a6c28.png?x-oss-process=image/resize,h_360/format,webp'
+          }
+        />
+      </div>
+      <div>hyojun9292</div>
     </div>
   );
 };
